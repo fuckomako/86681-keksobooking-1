@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Дмитрий Мальнев](https://up.htmlacademy.ru/nodejs/1/user/86681).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Щепотьев](https://htmlacademy.ru/profile/zeckson).
 
 ---
 
