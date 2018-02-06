@@ -1,26 +1,26 @@
 const args = process.argv.slice(2);
 
 switch (args[0]) {
-  case `--version`:
+  case '--version':
     console.log('v0.0.1');
     break;
 
-  case `--help`:
-    console.log(`Доступные команды:
-    --help    — печатает этот текст;
-    --version — печатает версию приложения;`);
+  case '--help':
+    console.log('Доступные команды:\n\r' +
+    '--help    — печатает этот текст;\n\r' +
+    '--version — печатает версию приложения;');
     break;
 
   default:
-    console.log(`Привет пользователь!
-      Эта программа будет запускать сервер «keksobooking».
-      Автор: Кекс.`);
-
-    if (args.length > 0) {
+    if (args.length === 0) {
+      console.log('Привет пользователь!\n\r' +
+        'Эта программа будет запускать сервер «keksobooking».\n\r'+
+        'Автор: Кекс.');
+    } else {
       args.forEach(arg =>
-        console.error(`Неизвестная команда ${arg}.
-          Чтобы прочитать правила использования приложения, наберите "--help"`),
+        console.error(`Неизвестная команда ${arg}.`)
       );
+      console.error('Чтобы прочитать правила использования приложения, наберите "--help"');
       process.exit(1);
     };
 }
