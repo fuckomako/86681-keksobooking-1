@@ -10,14 +10,12 @@ if (args.length === 0) {
 switch (args[0]) {
   case '--version':
     console.log('v0.0.1');
-    process.exit(0);
     break;
 
   case '--help':
     console.log('Доступные команды:\n\r' +
     '--help    — печатает этот текст;\n\r' +
     '--version — печатает версию приложения;');
-    process.exit(0);
     break;
 
   default:
