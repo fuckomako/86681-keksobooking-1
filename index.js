@@ -1,9 +1,9 @@
 const args = process.argv.slice(2);
 
 if (args.length === 0) {
-  console.log(`Привет пользователь!\n\r` +
-    `Эта программа будет запускать сервер «keksobooking».\n\r` +
-    `Автор: Кекс.`);
+  console.log(`Привет пользователь!
+    Эта программа будет запускать сервер «keksobooking».
+    Автор: Кекс.`);
   process.exit(0);
 }
 
@@ -13,9 +13,9 @@ switch (args[0]) {
     break;
 
   case `--help`:
-    console.log(`Доступные команды:\n\r` +
-    `--help    — печатает этот текст;\n\r` +
-    `--version — печатает версию приложения;`);
+    console.log(`Доступные команды:
+    --help    — печатает этот текст;
+    --version — печатает версию приложения;`);
     break;
 
   default:
