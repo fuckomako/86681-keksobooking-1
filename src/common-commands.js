@@ -5,9 +5,9 @@ const description = require(`./description`);
 const help = require(`./help`);
 
 module.exports = {
-  [`--${help.name}`]: () => help.execute(),
-  [`--${license.name}`]: () => license.execute(),
-  [`--${description.name}`]: () => description.execute(),
-  [`--${author.name}`]: () => author.execute(),
-  [`--${version.name}`]: () => version.execute()
+  [`--${help.name}`]: () => help,
+  [`--${license.name}`]: () => license,
+  [`--${description.name}`]: () => description,
+  [`--${author.name}`]: () => author,
+  [`--${version.name}`]: () => version
 };
