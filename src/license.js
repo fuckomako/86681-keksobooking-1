@@ -2,7 +2,7 @@ const packageInfo = require(`../package.json`);
 
 module.exports = {
   name: `license`,
-  description: `Shows program license`,
+  description: `Показать лицензию программы`,
   execute() {
     console.log(`лицензия: ${packageInfo.license}`);
   }

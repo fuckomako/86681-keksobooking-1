@@ -2,7 +2,7 @@ const packageInfo = require(`../package.json`);
 
 module.exports = {
   name: `description`,
-  description: `Shows program description`,
+  description: `Показать описание программы`,
   execute() {
     console.log(`описание: ${packageInfo.description}`);
   }

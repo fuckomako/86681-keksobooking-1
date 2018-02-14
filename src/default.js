@@ -5,12 +5,11 @@ module.exports = {
     if (arg) {
       console.error(`Неизвестная команда ${arg}.
 Чтобы прочитать правила использования приложения, наберите "--help"`);
-
-      process.exit(1);
-
+      return false;
     }
     console.log(`Привет пользователь!
 Эта программа будет запускать сервер «Keksobooking».
 Автор: Кекс.`);
+    return true;
   }
 };

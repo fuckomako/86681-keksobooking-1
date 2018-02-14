@@ -11,4 +11,6 @@ const commands = [version, help, author, license, description];
 
 const currentCommand = commands.find((command)=>`--${command.name}` === args[0]) || start;
 
-currentCommand.execute(args[0]);
+if (currentCommand.execute(args[0]) === false) {
+  process.exit(1);
+}

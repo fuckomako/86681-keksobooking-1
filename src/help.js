@@ -3,16 +3,16 @@ const author = require(`./author`);
 const license = require(`./license`);
 const description = require(`./description`);
 
-const otherCommands = [version, author, license, description];
-
 module.exports = {
   name: `help`,
-  description: `Shows help`,
+  description: `Помошь по программе`,
   execute() {
-    console.log(`Это приложение ничего не делает. Доступные команды:
-    \n${[this, ...otherCommands]
-      .map((command) => `--${command.name}:\t\t${command.description}`)
-      .join(`\n`)}
+    console.log(`Доступные команды:
+--${this.name}\t ${this.description}
+--${license.name}\t ${license.description}
+ --${version.name}\t ${version.description}
+ --${description.name}\t ${description.description}
+--${author.name}\t ${author.description}
     `);
-  },
+  }
 };

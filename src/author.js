@@ -2,7 +2,7 @@ const packageInfo = require(`../package.json`);
 
 module.exports = {
   name: `author`,
-  description: `Show programm author`,
+  description: `Показать автора программы`,
   execute() {
     console.log(`автор: ${packageInfo.author}`);
   }
