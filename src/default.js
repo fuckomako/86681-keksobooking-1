@@ -1,6 +1,6 @@
 module.exports = {
   name: `default`,
-  description: `Shows default and errors`,
+  description: `Начало программы и ошибки`,
   execute(arg) {
     if (arg) {
       console.error(`Неизвестная команда ${arg}.

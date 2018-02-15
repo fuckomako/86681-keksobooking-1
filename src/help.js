@@ -5,14 +5,14 @@ const description = require(`./description`);
 
 module.exports = {
   name: `help`,
-  description: `Помошь по программе`,
+  description: `Помощь по программе`,
   execute() {
     console.log(`Доступные команды:
---${this.name}\t ${this.description}
---${license.name}\t ${license.description}
- --${version.name}\t ${version.description}
- --${description.name}\t ${description.description}
---${author.name}\t ${author.description}
+--${this.name.padEnd(12)} ${this.description}
+--${license.name.padEnd(12)} ${license.description}
+--${version.name.padEnd(12)} ${version.description}
+--${description.name.padEnd(12)} ${description.description}
+--${author.name.padEnd(12)} ${author.description}
     `);
   }
 };

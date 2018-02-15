@@ -5,6 +5,6 @@ const args = process.argv.slice(2);
 
 const currentCommand = commonCommands[args] || start;
 
-if (currentCommand().execute(args[0]) === false) {
+if (currentCommand.execute(args[0]) === false) {
   process.exit(1);
 }
