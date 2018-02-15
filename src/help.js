@@ -1,18 +1,11 @@
-const version = require(`./commands/version`);
-const author = require(`./commands/author`);
-const license = require(`./commands/license`);
-const description = require(`./commands/description`);
+const commonCommands = require(`./commands/common-commands`);
 
 module.exports = {
   name: `help`,
   description: `Помощь по программе`,
   execute() {
+    const commands = [this, ...commonCommands];
     console.log(`Доступные команды:
---${this.name} ${this.description}
---${license.name} ${license.description}
---${version.name} ${version.description}
---${description.name} ${description.description}
---${author.name} ${author.description}
-    `);
+${commands.map((it) => `--${it.name.padEnd(12)} ${it.description}`).join(`\n`)}`);
   }
 };
