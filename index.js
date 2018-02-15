@@ -1,15 +1,11 @@
-const source = require(`./src/default`);
-const version = require(`./src/version`);
+const start = require(`./src/default`);
+const commonCommands = require(`./src/commands/common-commands`);
 const help = require(`./src/help`);
-const author = require(`./src/author`);
-const license = require(`./src/license`);
-const description = require(`./src/description`);
-
 
 const args = process.argv.slice(2);
 
-const commands = [version, help, author, license, description];
+const currentCommand = [...commonCommands, help].find((it) => `--${it.name}` === args[0]) || start;
 
-const currentCommand = commands.find((command)=>`--${command.name}` === args[0]) || source;
-
-currentCommand.execute(args[0]);
+if (currentCommand.execute(args[0]) === false) {
+  process.exit(1);
+}
