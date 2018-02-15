@@ -1,18 +1,18 @@
-const version = require(`./version`);
-const author = require(`./author`);
-const license = require(`./license`);
-const description = require(`./description`);
+const version = require(`./commands/version`);
+const author = require(`./commands/author`);
+const license = require(`./commands/license`);
+const description = require(`./commands/description`);
 
 module.exports = {
   name: `help`,
   description: `Помощь по программе`,
   execute() {
     console.log(`Доступные команды:
---${this.name.padEnd(12)} ${this.description}
---${license.name.padEnd(12)} ${license.description}
---${version.name.padEnd(12)} ${version.description}
---${description.name.padEnd(12)} ${description.description}
---${author.name.padEnd(12)} ${author.description}
+--${this.name} ${this.description}
+--${license.name} ${license.description}
+--${version.name} ${version.description}
+--${description.name} ${description.description}
+--${author.name} ${author.description}
     `);
   }
 };
