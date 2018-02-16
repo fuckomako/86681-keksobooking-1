@@ -1,3 +1,4 @@
+const colors = require(`colors/safe`);
 const commonCommands = require(`./commands/common-commands`);
 
 module.exports = {
@@ -6,6 +7,6 @@ module.exports = {
   execute() {
     const commands = [this, ...commonCommands];
     console.log(`Доступные команды:
-${commands.map((it) => `--${it.name.padEnd(12)} ${it.description}`).join(`\n`)}`);
+${commands.map((it) => `--${colors.grey(it.name.padEnd(12))} ${colors.green(it.description)}`).join(`\n`)}`);
   }
 };
